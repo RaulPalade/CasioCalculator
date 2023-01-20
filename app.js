@@ -152,7 +152,10 @@ function calculateResult() {
     operation += value;
   });
   displayInput.innerHTML = operation;
-  result = eval(operation).toFixed(2);
+  result = Number(eval(operation));
+  if (!Number.isInteger(result)) {
+    result = result.toFixed(2);
+  }
   selectedOperator = "";
 }
 
