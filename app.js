@@ -45,32 +45,35 @@ operators.forEach((operator) => {
         break;
 
       case "/":
-        valuesIndex++;
         if (stillOperator()) {
           values[valuesIndex - 1] = "/";
         } else {
+          valuesIndex++;
           values[valuesIndex] = "/";
           valuesIndex++;
         }
+        console.log(values);
         addToInputDisplay();
         break;
 
       case "X":
-        valuesIndex++;
         if (stillOperator()) {
           values[valuesIndex - 1] = "*";
         } else {
+          valuesIndex++;
           values[valuesIndex] = "*";
           valuesIndex++;
         }
+        console.log(values);
+
         addToInputDisplay();
         break;
 
       case "-":
-        valuesIndex++;
         if (stillOperator()) {
           values[valuesIndex - 1] = "-";
         } else {
+          valuesIndex++;
           values[valuesIndex] = "-";
           valuesIndex++;
         }
@@ -78,13 +81,15 @@ operators.forEach((operator) => {
         break;
 
       case "+":
-        valuesIndex++;
         if (stillOperator()) {
           values[valuesIndex - 1] = "+";
         } else {
+          valuesIndex++;
           values[valuesIndex] = "+";
           valuesIndex++;
         }
+        console.log(values);
+
         addToInputDisplay();
         break;
 
